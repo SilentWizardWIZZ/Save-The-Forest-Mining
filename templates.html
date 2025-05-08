@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Forest - Clicker Game</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Save the Forest</h1>
+            <p>Plant trees to restore the ecosystem and reduce pollution</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>Trees Planted</h3>
+                <div class="stat-value" id="trees-count">0</div>
+            </div>
+            <div class="stat-box">
+                <h3>Trees per Click</h3>
+                <div class="stat-value" id="trees-per-click">1</div>
+            </div>
+            <div class="stat-box">
+                <h3>Auto Plant Rate</h3>
+                <div class="stat-value" id="auto-plant-rate">0 / sec</div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-box">
+                <div class="progress-label">Forest Health: <span id="forest-health-value">0</span>%</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="forest-health-bar"></div>
+                </div>
+            </div>
+            <div class="progress-box">
+                <div class="progress-label">Pollution Level: <span id="pollution-value">100</span>%</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="pollution-bar" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-area">
+            <button id="plant-button" class="plant-button">
+                <i class="fas fa-tree"></i> Plant a Tree
+            </button>
+            <div id="click-feedback"></div>
+        </div>
+
+        <div class="shop-section">
+            <h2>Upgrades</h2>
+            <div class="upgrades-container">
+                <div class="upgrade-item" id="better-seeds">
+                    <div class="upgrade-info">
+                        <h3>Better Seeds</h3>
+                        <p>Plant 2 trees per click</p>
+                    </div>
+                    <button class="buy-button" data-upgrade="better-seeds" data-cost="10">
+                        Buy: 10 trees
+                    </button>
+                </div>
+                <div class="upgrade-item" id="gardening-tools">
+                    <div class="upgrade-info">
+                        <h3>Gardening Tools</h3>
+                        <p>Plant 5 trees per click</p>
+                    </div>
+                    <button class="buy-button" data-upgrade="gardening-tools" data-cost="50">
+                        Buy: 50 trees
+                    </button>
+                </div>
+                <div class="upgrade-item" id="tree-saplings">
+                    <div class="upgrade-info">
+                        <h3>Tree Saplings</h3>
+                        <p>Plant 10 trees per click</p>
+                    </div>
+                    <button class="buy-button" data-upgrade="tree-saplings" data-cost="200">
+                        Buy: 200 trees
+                    </button>
+                </div>
+                <div class="upgrade-item" id="auto-planter">
+                    <div class="upgrade-info">
+                        <h3>Auto Planter</h3>
+                        <p>Plants 1 tree every second</p>
+                    </div>
+                    <button class="buy-button" data-upgrade="auto-planter" data-cost="100">
+                        Buy: 100 trees
+                    </button>
+                </div>
+                <div class="upgrade-item" id="tree-farm">
+                    <div class="upgrade-info">
+                        <h3>Tree Farm</h3>
+                        <p>Plants 5 trees every second</p>
+                    </div>
+                    <button class="buy-button" data-upgrade="tree-farm" data-cost="500">
+                        Buy: 500 trees
+                    </button>
+                </div>
+                <div class="upgrade-item" id="reforestation-project">
+                    <div class="upgrade-info">
+                        <h3>Reforestation Project</h3>
+                        <p>Plants 20 trees every second</p>
+                    </div>
+                    <button class="buy-button" data-upgrade="reforestation-project" data-cost="2000">
+                        Buy: 2000 trees
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="milestone-popup" class="milestone-popup">
+            <div class="milestone-content">
+                <h3 id="milestone-title">Milestone Reached!</h3>
+                <p id="milestone-message">You've made progress in saving the forest!</p>
+                <button id="milestone-close">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Save the Forest - A clicker game about reforestation and environmental protection</p>
+    </footer>
+    
+    <script src="/game.js"></script>
+</body>
+</html>
